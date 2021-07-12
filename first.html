@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Intorduction to JS</title>
+	<script src="https://kit.fontawesome.com/3b88d962a4.js" crossorigin="anonymous"></script>
+	<style>
+		.quote {
+			width: fit-content; 
+			border: solid 2px black;
+			margin: 20px;  
+		  	padding: 10px;
+			top: 50px;
+		}
+  
+		.quote::before {
+			font-family: "FontAwesome";
+			font-weight: 400;
+			content: "\f10d";
+		}
+		
+		.quote::after{
+			font-family: "FontAwesome";
+			font-weight: 400;
+			content: "\f10e";
+		}        
+	</style>
+	</style>
+	<script>
+		let photosCount = 4;
+		let currentPhotoIndex = 1;
+
+		function showNextPhoto() {
+			currentPhotoIndex++;
+
+			if (currentPhotoIndex > photosCount) currentPhotoIndex = 1;
+
+			let elem = document.getElementById("currentPhoto");
+			elem.src = "C:/Users/User/Documents/Kolya/картинки/image" + currentPhotoIndex  + ".jpg";
+		}
+
+		function addPhoto() {
+			let newImage = document.createElement("img");
+
+			currentPhotoIndex++;
+			if (currentPhotoIndex > photosCount) currentPhotoIndex = 1;
+
+			newImage.src = "C:/Users/User/Documents/Kolya/картинки/image" + currentPhotoIndex  + ".jpg";
+
+			let containerElem = document.getElementById("gallery");
+			containerElem.appendChild(newImage);
+		}	
+	</script>
+</head>
+<body>
+	<div id="gallery">
+		<img id="currentPhoto" src="C:/Users/User/Documents/Kolya/картинки/image1.jpg" onmouseover="this.src='C:/Users/User/Documents/Kolya/картинки/image5.jpg'"/>
+	</div>
+	<button onclick="showNextPhoto()">Next</button>
+	<button onclick="addPhoto()">Add</button>
+
+	<div class="quote" id="quote">
+		Человек культурен настолько, насколько он способен понять кошку.
+	</div> 
+</body>
+</html>
