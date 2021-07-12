@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+        <meta charset="UTF-8">
+		<title>JS Animation</title>
+
+        <style>
+            #train {
+              position: relative;
+              cursor: pointer;
+            }
+
+            #brick {
+                width: 40px;
+                height: 20px;
+                background: red;
+                position: relative;
+                cursor: pointer;
+            }
+
+            #path {
+                outline: 1px solid orange;
+                width: 540px;
+                height: 20px;
+            }
+
+            #textExample, #animatedText {
+                display: block;
+            }
+          </style>
+	</head>
+	<body>
+        <img id="train" src="https://js.cx/clipart/train.gif">
+
+        <div id="path">
+            <div id="brick"></div>
+        </div>
+        
+        <div>
+            <textarea id="textExample" rows="5" cols="60">
+                Но взял он меч, и взял он щит,
+                Высоких полон дyм.
+                В глущобу путь его лежит
+                Под дерево Тумтум.
+            </textarea>
+                
+            <button id="animateText">Запустить анимацию набора текста!</button>
+        <div>
+
+        <script src="JS_for_animation.js"></script>
+    </body>				
+</html>
